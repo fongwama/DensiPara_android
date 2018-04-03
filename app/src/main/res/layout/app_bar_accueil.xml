@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.Home">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="@dimen/vingt"
+        android:layout_marginLeft="@dimen/trente"
+        android:layout_marginRight="@dimen/trente"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/colorgrey"
+        android:id="@+id/card_invisible"
+        app:cardElevation="@dimen/quatre"
+        android:layout_marginTop="130dp"
+        android:visibility="invisible"
+        android:layout_height="@dimen/soixanteDix">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:layout_width="wrap_content"
+                android:textStyle="bold|italic"
+                android:text="@string/bienvenu_sur_densipara"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <ScrollView
+        android:layout_marginTop="@dimen/soixanteDix"
+        android:layout_marginLeft="@dimen/cinq"
+        android:layout_marginRight="@dimen/cinq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/accueil_recy"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

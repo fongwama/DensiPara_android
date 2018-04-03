@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Densipara</string>
+    <string name="title_activity_accueil">Accueil</string>
+    <string name="title_activity_nouveau">Nouveau</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">About</string>
+    <string name="bienvenu_sur_densipara">BIENVENU SUR DENSIPARA</string>
+    <string name="desc1">DensiPara est une application de calcul de la densité parasitaire pour le diagnostic du paludisme.Développement : FCRM et Fongwama, la plateforme congolaise de développement libre.</string>
+    <string name="desc2">Cette application est un logiciel libre diffusé sous la licence : The GNU General Public License (GPL) Version 2, June 1991 Copyright (C) 1989, 1991 Free Software Foundation, Inc. 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+        </string>
+    <string name="desc4">Dévélopper par :</string>
+    <string name="desc5">Orion WAMBERT</string>
+    <string name="nombre_de_globules_blancs_l_de_sang">Nombre de globules blancs / µL de sang</string>
+    <string name="nombre_de_globules_blancs">Nombre de globules blancs</string>
+    <string name="reniatiliser">Reniatiliser</string>
+    <string name="calculer">Calculer</string>
+    <string name="nom_du_technicien">Nom du Technicien</string>
+    <string name="sauvegarder">SAUVEGARDER</string>
+    <string name="www_fongwama_com">www.fongwama.com</string>
+    <string name="resultat_analyse">"Resultat de l'analyse : "</string>
+    <string name="validate_fields">Tous les champs doivent être remplis</string>
+    <string name="success_ana">L\'analyse à bien été sauvegarder</string>
+    <string name="war_ana">Une erreur est survenue lors de la sauvegarde</string>
+    <string name="indique_patient">Veillez indiquer le nom du Patient</string>
+    <string name="indique_technicien">Veillez indiquer le nom du Technicien</string>
+</resources>

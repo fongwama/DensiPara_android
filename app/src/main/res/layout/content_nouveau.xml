@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="30dp"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_marginTop="30dp"
+        android:id="@+id/nbreParasite"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:textColor="@color/colorPrimary"
+        android:textColorLink="@color/colorGreen"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de parasites"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:inputType="number"
+        android:layout_below="@id/nbreParasite"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textColorLink="@color/colorGreen"
+        android:hint="@string/nombre_de_globules_blancs"
+        android:id="@+id/nbreGlobule"/>
+    <EditText
+        android:layout_below="@id/nbreGlobule"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:textColor="@color/colorPrimary"
+        android:textColorLink="@color/colorGreen"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre_de_globules_blancs_l_de_sang"
+        android:id="@+id/nbreGlobByU"/>
+    <Button
+        android:layout_below="@id/nbreGlobByU"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/colorWhite"
+        android:backgroundTint="@color/colorRed"
+        android:text="@string/reniatiliser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_reset"/>
+    <Button
+        android:layout_below="@id/nbreGlobByU"
+       android:layout_toLeftOf="@id/btn_reset"
+        android:text="@string/calculer"
+        android:backgroundTint="@color/colorgrey"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_cal"/>
+
+    <TextView
+        android:layout_below="@id/btn_cal"
+        android:id="@+id/text_result"
+        android:textSize="@dimen/vingt"
+        android:textStyle="bold|italic"
+        android:textColor="@color/colorGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_below="@id/text_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/nom_du_technicien"
+        android:id="@+id/nom_Tech"/>
+
+    <EditText
+        android:inputType="text"
+        android:layout_below="@id/nom_Tech"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom du patient"
+        android:id="@+id/nom_patient"/>
+
+    <Button
+        android:layout_below="@id/nom_patient"
+        android:layout_alignParentRight="true"
+        android:text="@string/sauvegarder"
+        android:textColor="@color/colorWhite"
+        android:id="@+id/btn_save"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+</RelativeLayout>
