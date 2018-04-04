@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import java.util.ArrayList;
 import java.util.List;
 import cg.fongwama.densipara.R;
@@ -24,6 +25,7 @@ public class SauvegardeFragment extends Fragment{
     private RecyclerView recyclerView;
     private AnalyseDao analyseDao;
     private List<Analyse> analyses;
+
     public SauvegardeFragment(){
 
 
@@ -66,18 +68,28 @@ public class SauvegardeFragment extends Fragment{
     }
 
 
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View v=inflater.inflate(R.layout.sve_fragment,container,false);
-        analyses=new ArrayList<>();
-        analyseDao=new AnalyseDao(v.getContext());
-        findAll();
-        recyclerView=(RecyclerView)v.findViewById(R.id.recyclerview);
-        LinearLayoutManager manager=new LinearLayoutManager(v.getContext());
-        recyclerView.setLayoutManager(manager);
-        AccuelAdapter adapter=new AccuelAdapter(v.getContext(),analyses);
-        recyclerView.setAdapter(adapter);
+
       return v;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        analyses=new ArrayList<>();
+        analyseDao=new AnalyseDao(getContext());
+        findAll();
+        recyclerView=(RecyclerView)getActivity().findViewById(R.id.recyclerview);
+        LinearLayoutManager manager=new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(manager);
+        AccuelAdapter adapter=new AccuelAdapter(getContext(),analyses);
+        recyclerView.setAdapter(adapter);
     }
 }
