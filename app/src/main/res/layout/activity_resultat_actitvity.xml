@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/soixanteDix"
+        android:textAlignment="center"
+
+        >
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar"
+            android:background="@color/colorRed"
+            android:layout_height="match_parent">
+            <android.support.design.widget.TabLayout
+                android:textAlignment="center"
+                android:id="@+id/mytabs"
+                android:layout_width="match_parent"
+                app:tabSelectedTextColor="@color/colorWhite"
+                app:tabGravity="fill"
+                android:layout_height="match_parent"
+                app:tabMode="fixed"
+
+                app:tabIndicatorColor="@color/colorWhite"
+                app:tabTextColor="@color/colorWhite"
+
+                />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_marginTop="80dp"
+        tools:context=".activity.About"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/anaNomPatient"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/anaResultat"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+
+        app:backgroundTint="@color/colorRed"
+
+        android:id="@+id/mapchanger"
+        app:srcCompat="@android:drawable/ic_menu_info_details"/>
+</android.support.design.widget.CoordinatorLayout>

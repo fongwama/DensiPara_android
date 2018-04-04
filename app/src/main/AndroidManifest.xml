@@ -24,7 +24,8 @@
         </activity>
         <activity
             android:name=".activity.Accueil"
-            android:label="Accueil"/>
+            android:label="Accueil" />
+        <activity android:name=".activity.ResultatActitvity"></activity>
     </application>
 
 </manifest>
