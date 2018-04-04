@@ -7,8 +7,10 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import cg.fongwama.densipara.R;
 import cg.fongwama.densipara.adapter.ViewPagerAdapter;
@@ -44,14 +46,16 @@ public class Accueil extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int i=item.getItemId();
-        if (i==R.id.action_settings){
-            Intent intent=new Intent(Accueil.this,About.class);
-            startActivity(intent);
-            return true;
-        }
-        return false;
+        Toast.makeText(Accueil.this, "TESTING 1", Toast.LENGTH_SHORT).show();
+        return true;
     }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        Toast.makeText(Accueil.this, "TESTING 2", Toast.LENGTH_SHORT).show();
+        return true;
+    }
+
 
     private void setViewPager(ViewPager viewPager){
         ViewPagerAdapter adapter=new ViewPagerAdapter(getSupportFragmentManager());
