@@ -33,7 +33,7 @@ public class Accueil extends AppCompatActivity {
         setViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.inflateMenu(R.menu.accueil);
+        toolbar.inflateMenu(R.menu.nouveau);
 
     }
     @Override
@@ -48,6 +48,7 @@ public class Accueil extends AppCompatActivity {
         if (i==R.id.action_settings){
             Intent intent=new Intent(Accueil.this,About.class);
             startActivity(intent);
+            return true;
         }
         return false;
     }
