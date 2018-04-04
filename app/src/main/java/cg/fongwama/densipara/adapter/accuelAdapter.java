@@ -15,12 +15,7 @@ import cg.fongwama.densipara.model.Analyse;
  * Created by Orion WAMBERT on 01/04/2018.
  */
 public class AccuelAdapter extends RecyclerView.Adapter {
-    private final String nomPatient="NOM_PATIENT";
-    private String nomTechnicien;
-    private int nbreParasite;
-    private int nbreGlobuleBlanc;
-    private int nbreGlobParSang;
-    private int resutatAnaluse;
+
     private Context context;
     private List<Analyse>analyses;
     public AccuelAdapter(Context context, List<Analyse> analyses){
