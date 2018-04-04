@@ -16,9 +16,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.Home"
-            android:label="@string/title_activity_accueil" />
-        <activity
             android:name=".activity.Nouveau"
             android:label="@string/title_activity_nouveau">
             <meta-data

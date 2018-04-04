@@ -3,23 +3,16 @@ package cg.fongwama.densipara.fragment;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
-
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import cg.fongwama.densipara.R;
+import cg.fongwama.densipara.adapter.AccuelAdapter;
 import cg.fongwama.densipara.dao.AnalyseDao;
 import cg.fongwama.densipara.dao.DbHandler;
 import cg.fongwama.densipara.model.Analyse;
@@ -76,9 +69,11 @@ public class SauvegardeFragment extends Fragment{
         View v=inflater.inflate(R.layout.sve_fragment,container,false);
         analyses=new ArrayList<>();
         analyseDao=new AnalyseDao(v.getContext());
-
         findAll();
         recyclerView=(RecyclerView)v.findViewById(R.id.recyclerview);
+        LinearLayoutManager manager=new LinearLayoutManager(v.getContext());
+        recyclerView.setLayoutManager(manager);
+        AccuelAdapter adapter=new AccuelAdapter(v.getContext(),analyses);
       return v;
     }
 }

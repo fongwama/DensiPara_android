@@ -105,20 +105,14 @@ public class NveFragment extends Fragment {
                         }else{
                             Toast.makeText(v.getContext(), R.string.war_ana,Toast.LENGTH_SHORT).show();
                         }
-
                     }else{
                         Toast.makeText(v.getContext(), R.string.indique_patient,Toast.LENGTH_SHORT).show();
-
                     }
                 }else{
                     Toast.makeText(v.getContext(), R.string.indique_technicien,Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
-
-
-
         return v;
     }
 
