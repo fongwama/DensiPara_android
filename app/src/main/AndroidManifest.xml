@@ -25,7 +25,13 @@
         <activity
             android:name=".activity.Accueil"
             android:label="Accueil" />
-        <activity android:name=".activity.ResultatActitvity"></activity>
+        <activity android:name=".activity.ResultatActitvity"
+            android:label="Resultat"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.Accueil" />
+        </activity>
     </application>
 
 </manifest>

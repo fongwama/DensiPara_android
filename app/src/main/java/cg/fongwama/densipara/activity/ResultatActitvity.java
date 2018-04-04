@@ -14,7 +14,7 @@ import cg.fongwama.densipara.model.Constante;
 
 public class ResultatActitvity extends AppCompatActivity {
     private FloatingActionButton actionButton;
-    private TextView nomPatient,resultaAnal;,
+    private TextView nomPatient,resultaAnal;
     private Toolbar toolbar;
 
 
@@ -23,7 +23,7 @@ public class ResultatActitvity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultat_actitvity);
 
-        toolbar=(Toolbar)findViewById(R.id.toolbar);
+        toolbar=(Toolbar)findViewById(R.id.toolbar_nve);
         actionButton=(FloatingActionButton)findViewById(R.id.mapchanger);
         nomPatient=(TextView)findViewById(R.id.anaNomPatient);
         resultaAnal=(TextView)findViewById(R.id.anaResultat);
@@ -35,10 +35,17 @@ public class ResultatActitvity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        setSupportActionBar(toolbar);
+
+
         Intent intent=getIntent();
+
 
         nomPatient.setText(intent.getStringExtra(Constante.nomPatient));
         resultaAnal.setText(intent.getStringExtra(Constante.resutatAnaluse));
+        if (getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
     }
 }

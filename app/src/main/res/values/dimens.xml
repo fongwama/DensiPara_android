@@ -13,4 +13,5 @@
     <dimen name="cinq">5dp</dimen>
     <dimen name="deux">2dp</dimen>
     <dimen name="one">1dp</dimen>
+    <dimen name="soixante">60dp</dimen>
 </resources>
