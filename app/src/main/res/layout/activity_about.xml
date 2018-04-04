@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         android:background="@color/colorWhite"
-        tools:context=".activity.Home">
+        tools:context=".activity.Accueil">
 
         <android.support.design.widget.AppBarLayout
 

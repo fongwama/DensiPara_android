@@ -15,18 +15,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.Nouveau"
-            android:label="@string/title_activity_nouveau">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.Home" />
-        </activity>
         <activity android:name=".activity.About"
             android:label="About">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.Home" />
+                android:value=".activity.Accueil" />
+        </activity>
+        <activity android:name=".activity.Accueil"
+            android:label="Accueil">
+
         </activity>
     </application>
 

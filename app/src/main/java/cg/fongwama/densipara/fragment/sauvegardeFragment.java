@@ -62,7 +62,10 @@ public class SauvegardeFragment extends Fragment{
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -74,6 +77,7 @@ public class SauvegardeFragment extends Fragment{
         LinearLayoutManager manager=new LinearLayoutManager(v.getContext());
         recyclerView.setLayoutManager(manager);
         AccuelAdapter adapter=new AccuelAdapter(v.getContext(),analyses);
+        recyclerView.setAdapter(adapter);
       return v;
     }
 }
