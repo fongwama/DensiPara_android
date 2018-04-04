@@ -3,6 +3,7 @@ package cg.fongwama.densipara.activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import cg.fongwama.densipara.R;
@@ -24,6 +26,7 @@ public class Accueil extends AppCompatActivity {
     private ViewPager viewPager;
     private Toolbar toolbar;
     private TabLayout tabLayout;
+    private FloatingActionButton actionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,27 +38,17 @@ public class Accueil extends AppCompatActivity {
         setViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.inflateMenu(R.menu.nouveau);
+        actionButton=(FloatingActionButton)findViewById(R.id.mapchanger);
+
+        actionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Accueil.this,About.class);
+                startActivity(intent);
+            }
+        });
 
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.nouveau,menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Toast.makeText(Accueil.this, "TESTING 1", Toast.LENGTH_SHORT).show();
-        return true;
-    }
-
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        Toast.makeText(Accueil.this, "TESTING 2", Toast.LENGTH_SHORT).show();
-        return true;
-    }
-
 
     private void setViewPager(ViewPager viewPager){
         ViewPagerAdapter adapter=new ViewPagerAdapter(getSupportFragmentManager());
