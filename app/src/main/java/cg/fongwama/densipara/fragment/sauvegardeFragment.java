@@ -15,7 +15,7 @@ import cg.fongwama.densipara.R;
  * Created by HP Notebook on 03/10/2017.
  */
 public class SauvegardeFragment extends Fragment{
-
+    private RecyclerView recyclerView;
     public SauvegardeFragment(){
 
 
@@ -28,8 +28,8 @@ public class SauvegardeFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View v=inflater.inflate(R.layout.content_nouveau,container,false);
-        recyclerView=(RecyclerView)v.findViewById(R.id)
+        View v=inflater.inflate(R.layout.sve_fragment,container,false);
+        recyclerView=(RecyclerView)v.findViewById(R.id.recyclerview);
       return v;
     }
 }

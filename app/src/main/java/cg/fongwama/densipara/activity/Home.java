@@ -15,13 +15,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import cg.fongwama.densipara.R;
-import cg.fongwama.densipara.adapter.HomeAdapter;
+import cg.fongwama.densipara.adapter.accuelAdapter;
 import cg.fongwama.densipara.dao.AnalyseDao;
 import cg.fongwama.densipara.dao.DbHandler;
 import cg.fongwama.densipara.model.Analyse;
@@ -44,7 +43,7 @@ public class Home extends AppCompatActivity
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-        HomeAdapter homeAdapter=new HomeAdapter(this,analyses);
+        accuelAdapter homeAdapter=new accuelAdapter(this,analyses);
         recyclerView.setAdapter(homeAdapter);
 
 

@@ -14,10 +14,10 @@ import cg.fongwama.densipara.model.Analyse;
 /**
  * Created by Orion WAMBERT on 01/04/2018.
  */
-public class HomeAdapter extends RecyclerView.Adapter {
+public class accuelAdapter extends RecyclerView.Adapter {
     private Context context;
     private List<Analyse>analyses;
-    public HomeAdapter(Context context, List<Analyse> analyses){
+    public accuelAdapter(Context context, List<Analyse> analyses){
         this.context=context;
         this.analyses=analyses;
     }
