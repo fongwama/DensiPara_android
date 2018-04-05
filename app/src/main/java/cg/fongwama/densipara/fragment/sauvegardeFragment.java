@@ -75,6 +75,7 @@ public class SauvegardeFragment extends Fragment{
         super.onResume();
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View v=inflater.inflate(R.layout.sve_fragment,container,false);
